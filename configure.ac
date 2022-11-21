@@ -29,8 +29,6 @@ PKG_CHECK_VAR([LIBVARNISHAPI_LIBDIR], [varnishapi], [libdir])
 AC_SUBST([VARNISH_LIBRARY_PATH],
 	[$LIBVARNISHAPI_LIBDIR:$LIBVARNISHAPI_LIBDIR/varnish])
 
-AC_SUBST([VTC_TESTS], "$(cd $srcdir/src && echo tests/*.vtc)")
-
 AS_VERSION_COMPARE([$VARNISH_VERSION], [5.0], [
 	AC_DEFINE([HAVE_VCL_EVENT_USE], [1], [Define if USE events are sent.])])
 
